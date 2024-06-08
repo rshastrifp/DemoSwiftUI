@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		917835822C0FD06400175559 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835812C0FD06400175559 /* DetailsView.swift */; };
+		917835872C12555F00175559 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835862C12555F00175559 /* ApiClient.swift */; };
+		917835892C127A7F00175559 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835882C127A7F00175559 /* CustomError.swift */; };
+		9178358C2C12845100175559 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358B2C12845100175559 /* UsersService.swift */; };
+		9178358E2C12847200175559 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358D2C12847200175559 /* BaseService.swift */; };
+		917835902C14A80F00175559 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358F2C14A80F00175559 /* ListViewModel.swift */; };
 		91B547802C0E8EF50077BDA5 /* ClearToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5477F2C0E8EF50077BDA5 /* ClearToDoApp.swift */; };
 		91B547822C0E8EF50077BDA5 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B547812C0E8EF50077BDA5 /* ListView.swift */; };
 		91B547842C0E8EF70077BDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B547832C0E8EF70077BDA5 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 
 /* Begin PBXFileReference section */
 		917835812C0FD06400175559 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		917835862C12555F00175559 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		917835882C127A7F00175559 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		9178358B2C12845100175559 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		9178358D2C12847200175559 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		9178358F2C14A80F00175559 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		91B5477C2C0E8EF50077BDA5 /* ClearToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B5477F2C0E8EF50077BDA5 /* ClearToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearToDoApp.swift; sourceTree = "<group>"; };
 		91B547812C0E8EF50077BDA5 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				91B547812C0E8EF50077BDA5 /* ListView.swift */,
+				9178358F2C14A80F00175559 /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -88,6 +99,25 @@
 				917835812C0FD06400175559 /* DetailsView.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		917835852C12553900175559 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				917835862C12555F00175559 /* ApiClient.swift */,
+				917835882C127A7F00175559 /* CustomError.swift */,
+				9178358A2C12839C00175559 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9178358A2C12839C00175559 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9178358D2C12847200175559 /* BaseService.swift */,
+				9178358B2C12845100175559 /* UsersService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		91B547732C0E8EF50077BDA5 = {
@@ -114,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				91B5477F2C0E8EF50077BDA5 /* ClearToDoApp.swift */,
+				917835852C12553900175559 /* Networking */,
 				91B547AA2C0E92A90077BDA5 /* Modules */,
 				91B547832C0E8EF70077BDA5 /* Assets.xcassets */,
 				91B547852C0E8EF70077BDA5 /* ClearToDo.entitlements */,
@@ -286,9 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9178358C2C12845100175559 /* UsersService.swift in Sources */,
+				917835892C127A7F00175559 /* CustomError.swift in Sources */,
 				91B547822C0E8EF50077BDA5 /* ListView.swift in Sources */,
 				91B547802C0E8EF50077BDA5 /* ClearToDoApp.swift in Sources */,
+				9178358E2C12847200175559 /* BaseService.swift in Sources */,
 				917835822C0FD06400175559 /* DetailsView.swift in Sources */,
+				917835902C14A80F00175559 /* ListViewModel.swift in Sources */,
+				917835872C12555F00175559 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

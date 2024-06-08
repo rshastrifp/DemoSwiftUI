@@ -15,31 +15,29 @@ struct Task: Identifiable {
 
 struct ListView: View {
     
-    let tasks = [
-            Task(title: "Task 1", description: "Description for Task 1"),
-            Task(title: "Task 2", description: "Description for Task 2"),
-            Task(title: "Task 3", description: "Description for Task 3")
-        ]
+    @StateObject var viewModel: ListViewModel = ListViewModel()
     
     var body: some View {
         VStack {
             NavigationView {
-                List(tasks) { task in
+                List(viewModel.users) { user in
                     NavigationLink(destination: DetailsView()) {
                         VStack(alignment: .leading) {
-                            Text(task.title)
+                            Text(user.name)
                                 .font(.headline)
-                            Text(task.description)
+                            Text(user.username)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                         }
                     }
                 }
-                .navigationTitle("To Dos")
+                .navigationTitle("Users")
             }
         }
-        .navigationTitle("ToDos")
         .padding()
+        .onAppear() {
+            viewModel.getUsers()
+        }
     }
 }
 
