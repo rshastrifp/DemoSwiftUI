@@ -20,18 +20,24 @@ struct ListView: View {
     var body: some View {
         VStack {
             NavigationView {
-                List(viewModel.users) { user in
-                    NavigationLink(destination: DetailsView()) {
-                        VStack(alignment: .leading) {
-                            Text(user.name)
-                                .font(.headline)
-                            Text(user.username)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                if viewModel.users.isEmpty {
+                    ProgressView {
+                        Text("Loading.....")
+                    }
+                } else {
+                    List(viewModel.users) { user in
+                        NavigationLink(destination: DetailsView()) {
+                            VStack(alignment: .leading) {
+                                Text(user.name)
+                                    .font(.headline)
+                                Text(user.username)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
+                    .navigationTitle("Users")
                 }
-                .navigationTitle("Users")
             }
         }
         .padding()
