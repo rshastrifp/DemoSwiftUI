@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		913BF3072C24FD6800299B05 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF3062C24FD6800299B05 /* PostService.swift */; };
+		913BF30B2C25019700299B05 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF30A2C25019700299B05 /* DetailsViewModel.swift */; };
 		917835822C0FD06400175559 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835812C0FD06400175559 /* DetailsView.swift */; };
 		917835872C12555F00175559 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835862C12555F00175559 /* ApiClient.swift */; };
 		917835892C127A7F00175559 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835882C127A7F00175559 /* CustomError.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		913BF3062C24FD6800299B05 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		913BF30A2C25019700299B05 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		917835812C0FD06400175559 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		917835862C12555F00175559 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		917835882C127A7F00175559 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				917835812C0FD06400175559 /* DetailsView.swift */,
+				913BF30A2C25019700299B05 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				9178358E2C12847200175559 /* BaseService.swift in Sources */,
 				917835822C0FD06400175559 /* DetailsView.swift in Sources */,
 				917835902C14A80F00175559 /* ListViewModel.swift in Sources */,
+				913BF30B2C25019700299B05 /* DetailsViewModel.swift in Sources */,
 				913BF3072C24FD6800299B05 /* PostService.swift in Sources */,
 				917835872C12555F00175559 /* ApiClient.swift in Sources */,
 			);

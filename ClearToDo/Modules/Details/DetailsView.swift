@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct DetailsView: View {
+    @StateObject var viewModel: DetailsViewModel = DetailsViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            if $viewModel.posts.isEmpty {
+                ProgressView {
+                    Text("Loading..")
+                }
+            } else {
+                List(viewModel.posts, id: \.id) { post in
+                    Text(post.title)
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fethPosts()
+        }
+        
     }
 }
 

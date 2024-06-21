@@ -36,7 +36,7 @@ class UsersService: BaseService, ServiceParameters {
 
 
 // MARK: - User
-struct User: Codable, Identifiable {
+struct User: Codable {
     let id: Int
     let name, username, email: String
     let address: Address
