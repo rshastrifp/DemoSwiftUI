@@ -17,12 +17,13 @@ class PostService: BaseService, ServiceParameters {
     
     var bodyParameters: [String : String]?
     
-    func fetchPosts() -> AnyPublisher<[PostElement], Error> {
+    func fetchPosts(queryParameter: [String : String]?) -> AnyPublisher<[PostElement], Error> {
         guard let url = URL(string: baseUrl + pathParameter) else {
             return Fail(error: URLError(.badURL))
                 .eraseToAnyPublisher()
         }
-        let urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.addQueryParameters(queryParameter ?? [:])
         return ApiClient.shared.makeServiceCall(urlRequest: urlRequest)
     }
 }

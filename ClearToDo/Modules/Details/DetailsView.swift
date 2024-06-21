@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct DetailsView: View {
-    @StateObject var viewModel: DetailsViewModel = DetailsViewModel()
+    @ObservedObject var viewModel: DetailsViewModel
+    
+    init(viewModel: DetailsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         Group {
@@ -30,5 +34,5 @@ struct DetailsView: View {
 }
 
 #Preview {
-    DetailsView()
+    DetailsView(viewModel: DetailsViewModel(selectedUser: 0))
 }

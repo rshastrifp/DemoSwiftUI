@@ -26,7 +26,7 @@ struct ListView: View {
                     }
                 } else {
                     List(viewModel.users, id: \.id) { user in
-                        NavigationLink(destination: DetailsView()) {
+                        NavigationLink(destination: DetailsView(viewModel: DetailsViewModel(selectedUser: user.id))) {
                             VStack(alignment: .leading) {
                                 Text(user.name)
                                     .font(.headline)

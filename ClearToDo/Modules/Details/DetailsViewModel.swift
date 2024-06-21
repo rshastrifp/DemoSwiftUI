@@ -12,10 +12,17 @@ class DetailsViewModel: ObservableObject {
     
     private var store = Set<AnyCancellable>()
     @Published var posts = [PostElement]()
+    var selectedUserId: Int
+    
+    init(store: Set<AnyCancellable> = Set<AnyCancellable>(), posts: [PostElement] = [PostElement](), selectedUser: Int) {
+        self.store = store
+        self.posts = posts
+        self.selectedUserId = selectedUser
+    }
     
     func fethPosts() {
         PostService()
-            .fetchPosts()
+            .fetchPosts(queryParameter: ["userId": String(selectedUserId)])
             .sink { completionResult in
                 switch completionResult {
                 case .finished: 
