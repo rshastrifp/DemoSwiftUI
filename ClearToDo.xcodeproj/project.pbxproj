@@ -10,9 +10,10 @@
 		913BF3072C24FD6800299B05 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF3062C24FD6800299B05 /* PostService.swift */; };
 		913BF30B2C25019700299B05 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF30A2C25019700299B05 /* DetailsViewModel.swift */; };
 		913BF30E2C25D7F700299B05 /* URLRequest+params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF30D2C25D7F700299B05 /* URLRequest+params.swift */; };
+		913BF3122C262C6D00299B05 /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BF3112C262C6D00299B05 /* ApiStatus.swift */; };
 		917835822C0FD06400175559 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835812C0FD06400175559 /* DetailsView.swift */; };
 		917835872C12555F00175559 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835862C12555F00175559 /* ApiClient.swift */; };
-		917835892C127A7F00175559 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835882C127A7F00175559 /* CustomError.swift */; };
+		917835892C127A7F00175559 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917835882C127A7F00175559 /* AppError.swift */; };
 		9178358C2C12845100175559 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358B2C12845100175559 /* UsersService.swift */; };
 		9178358E2C12847200175559 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358D2C12847200175559 /* BaseService.swift */; };
 		917835902C14A80F00175559 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178358F2C14A80F00175559 /* ListViewModel.swift */; };
@@ -46,9 +47,10 @@
 		913BF3062C24FD6800299B05 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		913BF30A2C25019700299B05 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		913BF30D2C25D7F700299B05 /* URLRequest+params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+params.swift"; sourceTree = "<group>"; };
+		913BF3112C262C6D00299B05 /* ApiStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
 		917835812C0FD06400175559 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		917835862C12555F00175559 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		917835882C127A7F00175559 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		917835882C127A7F00175559 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9178358B2C12845100175559 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		9178358D2C12847200175559 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9178358F2C14A80F00175559 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -120,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				917835862C12555F00175559 /* ApiClient.swift */,
-				917835882C127A7F00175559 /* CustomError.swift */,
+				917835882C127A7F00175559 /* AppError.swift */,
+				913BF3112C262C6D00299B05 /* ApiStatus.swift */,
 				9178358A2C12839C00175559 /* Services */,
 			);
 			path = Networking;
@@ -335,13 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9178358C2C12845100175559 /* UsersService.swift in Sources */,
-				917835892C127A7F00175559 /* CustomError.swift in Sources */,
+				917835892C127A7F00175559 /* AppError.swift in Sources */,
 				91B547822C0E8EF50077BDA5 /* ListView.swift in Sources */,
 				91B547802C0E8EF50077BDA5 /* ClearToDoApp.swift in Sources */,
 				9178358E2C12847200175559 /* BaseService.swift in Sources */,
 				917835822C0FD06400175559 /* DetailsView.swift in Sources */,
 				917835902C14A80F00175559 /* ListViewModel.swift in Sources */,
 				913BF30E2C25D7F700299B05 /* URLRequest+params.swift in Sources */,
+				913BF3122C262C6D00299B05 /* ApiStatus.swift in Sources */,
 				913BF30B2C25019700299B05 /* DetailsViewModel.swift in Sources */,
 				913BF3072C24FD6800299B05 /* PostService.swift in Sources */,
 				917835872C12555F00175559 /* ApiClient.swift in Sources */,

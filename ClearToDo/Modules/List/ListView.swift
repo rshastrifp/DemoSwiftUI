@@ -16,11 +16,12 @@ struct Task: Identifiable {
 struct ListView: View {
     
     @StateObject var viewModel: ListViewModel = ListViewModel()
+    @State var shouldShowError: Bool = false
     
     var body: some View {
         VStack {
             NavigationView {
-                if viewModel.users.isEmpty {
+                if viewModel.apiStatus == .loading {
                     ProgressView {
                         Text("Loading.....")
                     }
@@ -40,10 +41,29 @@ struct ListView: View {
                 }
             }
         }
-        .padding()
+        .onReceive(viewModel.$apiStatus, perform: { newStatus in
+            switch newStatus {
+            case .failure(_):
+                self.shouldShowError = true
+            default:
+                break
+            }
+        })
         .onAppear() {
             viewModel.getUsers()
         }
+        .alert(isPresented: $shouldShowError, content: {
+            var errorMessage = "Something went wrong.!"
+            if case ApiStatus.failure(let error) = viewModel.apiStatus {
+                if let error = error as? AppError,
+                   case AppError.customError(_, let message) = error {
+                    errorMessage = message
+                } else {
+                    errorMessage = error.localizedDescription
+                }
+            }
+            return Alert(title: Text("Opps!"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+        })
     }
 }
 

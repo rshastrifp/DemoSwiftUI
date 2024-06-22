@@ -27,7 +27,7 @@ class UsersService: BaseService, ServiceParameters {
                 .eraseToAnyPublisher()
         }
         
-        let urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
         
         return ApiClient.shared.makeServiceCall(urlRequest: urlRequest)
     }
